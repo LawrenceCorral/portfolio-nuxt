@@ -6,7 +6,6 @@
           border-b border-green-900/50 pb-2 mb-12"
 >
 
---Portolio Name/Branding--
 
 <NuxtLink 
   to="/" 
@@ -15,7 +14,6 @@
     CORRAL
 </NuxtLink>
   
---Desktop Navigation Links--
 
 <nav 
  aria-label="Main Navigation"
@@ -59,7 +57,6 @@
 </NuxtLink>
 </nav>
 
---For Mobile Navigation Links--
 
     <div class="dropdown dropdown-end md:hidden mt-4">
       <button

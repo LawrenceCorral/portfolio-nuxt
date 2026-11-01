@@ -1,12 +1,25 @@
 <template>
-  <section class ="flex flex-col md:flex-row items-center gap-10">
+  <section class="flex flex-col items-center text-center gap-6 py-12">
 
-    <div class="w-64 h-64 border border-green-500/50 p-2">
-        <img
-            src="/images/home/home-lawrence.jpg"
-            alt="Lawrence Dave S. Corral"
-            class="w-full h-full object-cover" 
-            />
+    <div class="w-40 h-40 rounded-full border-2 border-green-500 p-1">
+      <img
+        src="/images/home/home-lawrence.jpg"
+        alt="Lawrence Dave S. Corral"
+        class="w-full h-full rounded-full object-cover"
+      />
     </div>
+
+    <div class="space-y-3">
+
+      <h1 class="font-matrix text-4xl text-white matrix-glow">
+        LAWRENCE DAVE CORRAL
+      </h1>
+
+      <p class="font-jetbrains text-green-400 text-sm">
+        Aspiring Frontend Web Developer & Game Developer
+      </p>
+
+    </div>
+
   </section>
 </template>
