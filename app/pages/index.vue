@@ -1,3 +1,7 @@
+<script setup>
+
+</script>
+
 <template>
   <section class="flex flex-col items-center text-center gap-6 py-12">
 
@@ -19,7 +23,12 @@
         Aspiring Frontend Web Developer & Game Developer
       </p>
 
+  <a href="#" aria-label="GitHub profile" class="flex justify-center">
+    <img
+      src="/images/home/home-github-invertocat-white.svg"
+      alt="GitHub"
+      class="w-8 h-8" />
+  </a>
     </div>
-
   </section>
 </template>

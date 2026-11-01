@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@lucide/vue": "^1.66.0",
     "@tailwindcss/vite": "^4.3.3",
     "daisyui": "^5.7.50",
     "nuxt": "^4.5.2",
