@@ -6,7 +6,6 @@
           border-b border-green-900/50 pb-2 mb-12"
 >
 
-
 <NuxtLink 
   to="/" 
   class="text-3xl font-matrix tracking-widest text-white matrix-glow"
@@ -30,7 +29,7 @@
 </NuxtLink>
 
  <NuxtLink 
-  to="/" 
+  to="/about" 
   class="hover:text-green-400 transition-colors"
   active-class="text-green-400"
   exact-active-class="text-green-400"
@@ -48,12 +47,12 @@
 </NuxtLink>
   
  <NuxtLink 
-  to="/certificates" 
+  to="/certificate" 
   class="hover:text-green-400 transition-colors"
   active-class="text-green-400"
   exact-active-class="text-green-400"
 >
-    CERTIFICATES
+    CERTIFICATE
 </NuxtLink>
 </nav>
 
