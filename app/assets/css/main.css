@@ -1,2 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@700&family=VT323&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
+
+.font-matrix {
+  font-family: 'VT323', monospace;
+}
+
+.font-cyber {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.font-jetbrains {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Neon green Matrix glow */
+.matrix-glow {
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
+}
+
+/* Moving scan line */
+.animate-scan {
+  animation: scan 4s linear infinite;
+}
+
+@keyframes scan {
+  0% {
+    top: 0%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+/* Retro CRT scan lines */
+.bg-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 255, 65, 0.05) 50%
+  );
+  background-size: 100% 4px;
+}
