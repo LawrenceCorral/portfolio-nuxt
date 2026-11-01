@@ -1,0 +1,5 @@
+<template>
+  <section>
+    <h1>Certificates</h1>
+  </section>
+</template>
