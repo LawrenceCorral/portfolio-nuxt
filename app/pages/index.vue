@@ -23,7 +23,7 @@
         Aspiring Frontend Web Developer & Game Developer
       </p>
 
-  <a href="#" aria-label="GitHub profile" class="flex justify-center">
+  <a href="https://github.com/LawrenceCorral" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="flex justify-center">
     <img
       src="/images/home/home-github-invertocat-white.svg"
       alt="GitHub"
