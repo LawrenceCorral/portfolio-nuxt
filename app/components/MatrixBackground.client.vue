@@ -12,8 +12,15 @@ onMounted(async () => {
 
   try {
     const vantaModule = await import('vanta/dist/vanta.net.min')
-    const NET = vantaModule.default.default
 
+const NET =
+  typeof vantaModule.default === 'function'
+    ? vantaModule.default
+    : vantaModule.default?.default
+
+if (typeof NET !== 'function') {
+  throw new TypeError('Vanta.NET export is not a function')
+}
     vantaEffect = NET({
       el: background.value,
       THREE,
