@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 py-8">
+    <div class="mx-auto max-w-6xl px-6 py-8">
       <Navbar />
       <main>
         <slot />

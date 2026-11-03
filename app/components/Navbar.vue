@@ -1,9 +1,7 @@
 <template>
 
-<header 
- class = "relative z-10 w-full max-w-4x1 mx-auto flex flex -col md:flex-row
-          justify-between items-center 
-          border-b border-green-900/50 pb-2 mb-12"
+<header
+  class="relative z-10 mx-auto flex w-full flex-col items-center justify-between border-b border-green-900/50 pb-4 mb-10 md:flex-row"
 >
 
 <NuxtLink 
