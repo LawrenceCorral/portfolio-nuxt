@@ -5,6 +5,9 @@
   <section
     class="relative isolate flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center gap-6 overflow-hidden px-4 py-8 text-center"
   >
+
+    <MatrixBackground/>
+
     <div
       class="pointer-events-none fixed inset-0 -z-10 bg-[url('/images/home/home-matrix.jpg')] bg-cover bg-center opacity-20"
       aria-hidden="true"
