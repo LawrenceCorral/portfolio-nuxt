@@ -10,7 +10,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <section class="relative isolate min-h-screen overflow-hidden px-4 py-12">
+  <section class="relative isolate min-h-screen overflow-hidden px-4 pt-4 pb-12">
     <MatrixBackground />
 
     <!-- Background Image -->
@@ -30,39 +30,30 @@ useSeoMeta({
         </p>
       </header>
 
-      <!-- About Content -->
-      <article class="border border-green-800/60 bg-black/70 p-6 shadow-lg md:p-8">
-        <div class="mb-6 flex items-center gap-2 border-b border-green-900/60 pb-4">
-          <span class="h-3 w-3 rounded-full bg-red-500"></span>
-          <span class="h-3 w-3 rounded-full bg-yellow-500"></span>
-          <span class="h-3 w-3 rounded-full bg-green-500"></span>
-          <p class="ml-3 font-jetbrains text-sm text-green-400">
-            About Me
-          </p>
-        </div>
+<!-- About Content -->
+<ContentCard title="About Me">
+  <div class="space-y-5 font-jetbrains text-sm leading-8 text-gray-300">
+    <p>
+      Hello! I am Lawrence Dave S. Corral, currently studying at St. Dominic
+      College of Asia. My interest in technology started with my passion
+      for playing video games, which made me curious about how these
+      digital worlds and interfaces are created.
+    </p>
 
-        <div class="space-y-5 font-jetbrains text-sm leading-8 text-gray-300">
-          <p>
-            Hello! I am Lawrence Dave S. Corral, currently studying at St. Dominic
-            College of Asia. My interest in technology started with my passion
-            for playing video games, which made me curious about how these
-            digital worlds and interfaces are created.
-          </p>
+    <p>
+      This hobby led me to pursue a degree in Information Technology to
+      understand the logic behind the screens. I am a quiet person, but I
+      am dedicated to improving my communication and teamwork—essential
+      skills in the IT field.
+    </p>
 
-          <p>
-            This hobby led me to pursue a degree in Information Technology to
-            understand the logic behind the screens. I am a quiet person, but I
-            am dedicated to improving my communication and teamwork—essential
-            skills in the IT field.
-          </p>
-
-          <p>
-            My professional aspiration is to become a Frontend Web Developer.
-            I want to master modern web technologies to create seamless digital
-            experiences that are as interactive and smooth as the games I enjoy.
-          </p>
-        </div>
-      </article>
+    <p>
+      My professional aspiration is to become a Frontend Web Developer.
+      I want to master modern web technologies to create seamless digital
+      experiences that are as interactive and smooth as the games I enjoy.
+    </p>
+  </div>
+</ContentCard>
     </div>
   </section>
 </template>

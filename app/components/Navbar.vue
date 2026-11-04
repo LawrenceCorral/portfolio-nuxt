@@ -1,7 +1,7 @@
 <template>
 
 <header
-  class="relative z-10 mx-auto flex w-full flex-col items-center justify-between border-b border-green-900/50 pb-4 mb-10 md:flex-row"
+  class="relative z-10 mx-auto flex w-full flex-col items-center justify-between border-b border-green-900/50 pb-4 mb-6 md:flex-row"
 >
 
 <NuxtLink 
@@ -81,12 +81,12 @@
       <ul
         tabindex="0"
         class="menu menu-sm dropdown-content bg-black/95 border border-green-900
-        rounded-box z-50 mt-3 w-52 p-2 shadow-x1 font-jetbrains uppercase"
+        rounded-box z-50 mt-3 w-52 p-2 shadow-xl font-jetbrains uppercase"
         >
          <li><NuxtLink to="/">HOME</NuxtLink></li>
          <li><NuxtLink to="/about">ABOUT</NuxtLink></li>
          <li><NuxtLink to="/stacks">STACKS</NuxtLink></li>
-         <li><NuxtLink to="/certificates">CERTIFICATES</NuxtLink></li>
+         <li><NuxtLink to="/certificate">CERTIFICATES</NuxtLink></li>
         
     </ul>
     </div>

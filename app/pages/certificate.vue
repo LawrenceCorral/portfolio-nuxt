@@ -1,4 +1,7 @@
+
 <script setup>
+import { ref } from 'vue'
+
 useHead({
   title: 'Certificates | Lawrence Dave Corral'
 })
@@ -25,49 +28,52 @@ const certificates = [
   }
 ]
 
-const verificationUrl ='https://www.certiport.com/portal/pages/credentialverification.aspx'
+const verificationUrl =
+  'https://www.certiport.com/portal/pages/credentialverification.aspx'
+
+const selectedCertificate = ref(null)
+
+function openCertificate(certificate) {
+  selectedCertificate.value = certificate
+}
+
+function closeCertificate() {
+  selectedCertificate.value = null
+}
 </script>
 
 <template>
-  <section class="relative isolate min-h-screen overflow-hidden px-4 py-12">
+  <section class="relative isolate min-h-screen overflow-hidden px-4 py-10">
     <MatrixBackground />
 
-    <!-- Background Image -->
     <div
-      class="pointer-events-none fixed inset-0 -z-10 bg-[url('/images/certificates/cert-matrix.jpg')] bg-cover bg-center opacity-20"
+      class="pointer-events-none fixed inset-0 -z-10 bg-[url('/images/certificates/home-matrix.jpg')] bg-cover bg-center opacity-20"
       aria-hidden="true"
     ></div>
 
-    <div class="relative z-10 mx-auto flex max-w-5xl flex-col gap-10">
-      <!-- Page Heading -->
-      <header class="text-center">
-        <h1 class="font-matrix matrix-glow text-5xl text-white md:text-6xl">
-          CERTIFICATES
-        </h1>
-        <p class="mt-3 font-jetbrains text-sm text-green-400">
-          My achievements and credentials
-        </p>
-      </header>
+    <div class="relative z-10 mx-auto w-full max-w-5xl">
+      <h1 class="mb-10 text-center font-matrix text-5xl text-green-400 matrix-glow md:text-6xl">
+        MY CERTIFICATES
+      </h1>
 
-      <!-- Certificate Gallery -->
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         <article
           v-for="certificate in certificates"
           :key="certificate.name"
-          class="flex flex-col items-center gap-5 border border-green-800/60 bg-black/70 p-5"
+          class="flex flex-col items-center gap-5 border border-green-800/60 bg-black/70 p-5 transition hover:-translate-y-1 hover:border-green-400"
         >
-          <a
-            :href="certificate.image"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            class="w-full cursor-pointer"
             :aria-label="`View ${certificate.name}`"
+            @click="openCertificate(certificate)"
           >
             <img
               :src="certificate.badge"
               :alt="certificate.name"
-              class="w-full max-w-56 object-contain transition-transform duration-200 hover:scale-105"
+              class="mx-auto w-full max-w-56 object-contain"
             />
-          </a>
+          </button>
 
           <h2 class="text-center font-jetbrains text-sm text-white">
             {{ certificate.name }}
@@ -77,11 +83,40 @@ const verificationUrl ='https://www.certiport.com/portal/pages/credentialverific
             :href="verificationUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="border border-green-700/60 px-4 py-2 font-jetbrains text-xs text-green-400 transition-colors hover:border-green-400 hover:bg-green-500/10"
+            class="border border-green-700/60 px-4 py-2 font-jetbrains text-xs text-green-400 hover:border-green-400 hover:bg-green-500/10"
           >
             VERIFY CERTIFICATE
           </a>
         </article>
+      </div>
+    </div>
+
+    <!-- Certificate Lightbox -->
+    <div
+      v-if="selectedCertificate"
+      class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 p-4"
+      @click.self="closeCertificate"
+    >
+      <div class="flex max-h-[90vh] w-full max-w-4xl flex-col items-center gap-4 border border-green-500 bg-black p-5">
+
+        <button
+          type="button"
+          class="self-end border border-green-700 px-4 py-2 font-jetbrains text-sm text-green-400 hover:border-green-400"
+          @click="closeCertificate"
+        >
+          CLOSE ✕
+        </button>
+
+        <img
+          :src="selectedCertificate.image"
+          :alt="selectedCertificate.name"
+          class="max-h-[70vh] max-w-full object-contain"
+        />
+
+        <p class="font-jetbrains text-sm text-green-400">
+          {{ selectedCertificate.name }}
+        </p>
+
       </div>
     </div>
   </section>

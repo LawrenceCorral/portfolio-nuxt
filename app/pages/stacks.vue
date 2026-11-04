@@ -25,7 +25,7 @@ const tools = [
 </script>
 
 <template>
-  <section class="relative isolate min-h-screen overflow-hidden px-4 py-12">
+  <section class="relative isolate min-h-screen overflow-hidden px-4 pt-4 pb-12">
     <MatrixBackground />
 
     <!-- Background Image -->
@@ -45,53 +45,36 @@ const tools = [
         </p>
       </header>
 
-      <!-- Languages -->
-      <section>
-        <h2 class="mb-6 border-b border-green-800/60 pb-3 font-matrix text-3xl text-green-400">
-          LANGUAGES
-        </h2>
+  <!-- Languages -->
+  <section>
+    <h2 class="mb-6 border-b border-green-800/60 pb-3 font-matrix text-3xl text-green-400">
+      LANGUAGES
+    </h2>
 
-        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-          <article
-            v-for="item in languages"
-            :key="item.name"
-            class="flex flex-col items-center gap-4 border border-green-800/60 bg-black/70 p-6"
-          >
-            <img
-              :src="item.image"
-              :alt="item.name"
-              class="h-20 w-20 object-contain"
-            />
-            <h3 class="font-jetbrains text-sm text-white">
-              {{ item.name }}
-            </h3>
-          </article>
-        </div>
-      </section>
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+      <StackCard
+        v-for="item in languages"
+        :key="item.name"
+        :name="item.name"
+        :image="item.image"
+      />
+    </div>
+  </section>
 
-      <!-- Tools -->
-      <section>
-        <h2 class="mb-6 border-b border-green-800/60 pb-3 font-matrix text-3xl text-green-400">
-          TOOLS
-        </h2>
-
-        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-          <article
-            v-for="item in tools"
-            :key="item.name"
-            class="flex flex-col items-center gap-4 border border-green-800/60 bg-black/70 p-6"
-          >
-            <img
-              :src="item.image"
-              :alt="item.name"
-              class="h-20 w-20 object-contain"
-            />
-            <h3 class="text-center font-jetbrains text-sm text-white">
-              {{ item.name }}
-            </h3>
-          </article>
-        </div>
-      </section>
+  <!-- Tools -->
+  <section>
+    <h2 class="mb-6 border-b border-green-800/60 pb-3 font-matrix text-3xl text-green-400">
+      TOOLS
+    </h2>
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+      <StackCard
+        v-for="item in tools"
+        :key="item.name"
+        :name="item.name"
+        :image="item.image"
+      />
+    </div>
+  </section>
     </div>
   </section>
 </template>
