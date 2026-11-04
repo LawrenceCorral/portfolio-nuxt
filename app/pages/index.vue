@@ -1,6 +1,9 @@
 <script setup>
+
+useHead({
+  title: 'HOME | Lawrence Dave Corral'
+})
 useSeoMeta({
-  title: 'Home | Lawrence Dave Corral',
   description: 'This is my personal portfolio of Lawrence Dave Corral, an aspiring frontend web developer and game developer'
 })
 </script>
