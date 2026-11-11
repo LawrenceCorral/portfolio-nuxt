@@ -19,41 +19,48 @@ useSeoMeta({
       aria-hidden="true"
     ></div>
 
-    <!-- Content of the page-->
+    <!-- Content of the page--> 
     <div class="relative z-10 mx-auto flex max-w-4xl flex-col gap-8">
-      <header class="text-center">
-        <h1 class="font-matrix matrix-glow text-5xl text-white md:text-6xl">
-          ABOUT ME
-        </h1>
-        <p class="mt-3 font-jetbrains text-sm text-green-400">
-          Get to know me
-        </p>
-      </header>
+      
 
-<!-- About Content -->
-<ContentCard title="About Me">
-  <div class="space-y-5 font-jetbrains text-sm leading-8 text-gray-300">
-    <p>
-      Hello! I am Lawrence Dave S. Corral, currently studying at St. Dominic
-      College of Asia. My interest in technology started with my passion
-      for playing video games, which made me curious about how these
-      digital worlds and interfaces are created.
-    </p>
+  <header class="mx-auto w-full max-w-3xl">
+    <div class="group flex flex-col items-center gap-5 border border-green-700/50 bg-black/80 p-6 text-center shadow-[0_0_25px_rgba(0,255,100,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-green-400/70 hover:shadow-[0_0_35px_rgba(0,255,100,0.18)] motion-reduce:transition-none sm:flex-row sm:text-left md:p-8">
 
-    <p>
-      This hobby led me to pursue a degree in Information Technology to
-      understand the logic behind the screens. I am a quiet person, but I
-      am dedicated to improving my communication and teamwork—essential
-      skills in the IT field.
-    </p>
+    <!-- Portrait -->
+    <div class="relative shrink-0">
+      <div
+        class="absolute -inset-2 rounded-full border border-green-500/40"
+        aria-hidden="true"
+      ></div>
 
-    <p>
-      My professional aspiration is to become a Frontend Web Developer.
-      I want to master modern web technologies to create seamless digital
-      experiences that are as interactive and smooth as the games I enjoy.
-    </p>
+      <img
+        src="/images/home/home-lawrence.jpg"
+        alt="Portrait of Lawrence Dave Corral"
+        class="relative h-28 w-28 rounded-full border-2 border-green-500 object-cover shadow-[0_0_18px_rgba(0,255,100,0.25)] transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none md:h-32 md:w-32"
+      />
+    </div>
+
+    <!--Information -->
+    <div class="min-w-0">
+      <p class="mb-2 font-jetbrains text-xs tracking-[0.2em] text-green-500">
+        ABOUT / PROFILE
+      </p>
+
+    <h1 class="matrix-glow font-matrix text-3xl text-white md:text-4xl">
+      ABOUT ME
+    </h1>
+
+      <h2 class="mt-2 font-cyber text-sm tracking-wide text-green-400 md:text-base">
+        LAWRENCE DAVE CORRAL
+      </h2>
+
+      <p class="mt-2 font-jetbrains text-xs leading-6 text-gray-400">
+        IT STUDENT // ASPIRING FRONTEND WEB DEVELOPER
+      </p>
+    </div>
+
   </div>
-</ContentCard>
+</header>
     </div>
   </section>
 </template>

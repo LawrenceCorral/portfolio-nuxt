@@ -12,10 +12,10 @@
 </NuxtLink>
   
 
-<nav 
- aria-label="Main Navigation"
- class="hidden md:flex gap-6 text-sm uppercase font-jetbrains"
- >
+<nav
+  aria-label="Main Navigation"
+  class="navbar-desktop-links flex gap-6 text-sm uppercase font-jetbrains text-white"
+>
 
  <NuxtLink 
   to="/" 
@@ -55,7 +55,7 @@
 </nav>
 
 
-    <div class="dropdown dropdown-end md:hidden mt-4">
+    <div class="navbar-mobile-menu dropdown dropdown-end mt-4">
       <button
         tabindex="0"
         type="button"
@@ -93,3 +93,23 @@
 
 </header>
 </template>
+
+<style scoped>
+.navbar-desktop-links {
+  display: flex !important;
+}
+
+.navbar-mobile-menu {
+  display: none !important;
+}
+
+@media (max-width: 47.999rem) {
+  .navbar-desktop-links {
+    display: none !important;
+  }
+
+  .navbar-mobile-menu {
+    display: block !important;
+  }
+}
+</style>
